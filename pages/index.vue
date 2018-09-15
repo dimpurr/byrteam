@@ -11,15 +11,17 @@
         </ul>
       </nav>
     </section>
+    <service />
   </div>
 </template>
 
 <script>
 import AppLogo from '~/components/AppLogo.vue'
-
+import Service from '~/components/Service.vue'
 export default {
   components: {
-    AppLogo
+    AppLogo,
+    Service
   }
 }
 </script>
