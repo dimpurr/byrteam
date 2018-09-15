@@ -16,9 +16,14 @@
                 <span :class="{visible:isArrowRightShow,hidden:!isArrowRightShow}" @click="introCurrentIdx++">&gt;</span>
             </div>
         </div>
-        <div class="intro-right">
-            <img src="/slide-main-team.png" />
-        </div>
+
+        <swiper class="intro-right">
+
+            <swiper-item v-for="(item,$index) in intros" :key="item.title" :show="introCurrentIdx == $index">
+                <img :src="item.imgUrl" />
+            </swiper-item>
+        </swiper>
+
     </section>
 </template>
 <script>
@@ -46,22 +51,26 @@ export default {
         {
           title: "可能是北邮第二值得加入的团队，如今招新。",
           content:
-            "成立于 2003 年 ，来自北邮人论坛、北邮人 BT 和 BYRIO 社区，传统悠久、技术深厚、大佬如云"
+            "成立于 2003 年 ，来自北邮人论坛、北邮人 BT 和 BYRIO 社区，传统悠久、技术深厚、大佬如云",
+          imgUrl: "/slide-main-team.png"
         },
         {
           title: "可能是北邮第二值得加入的团队，如今招新。1",
           content:
-            "成立于 2003 年 ，来自北邮人论坛、北邮人 BT 和 BYRIO 社区，传统悠久、技术深厚、大佬如云4"
+            "成立于 2003 年 ，来自北邮人论坛、北邮人 BT 和 BYRIO 社区，传统悠久、技术深厚、大佬如云4",
+          imgUrl: "/slide-main-tshirt.png"
         },
         {
           title: "可能是北邮第二值得加入的团队，如今招新。2",
           content:
-            "成立于 2003 年 ，来自北邮人论坛、北邮人 BT 和 BYRIO 社区，传统悠久、技术深厚、大佬如云5"
+            "成立于 2003 年 ，来自北邮人论坛、北邮人 BT 和 BYRIO 社区，传统悠久、技术深厚、大佬如云5",
+          imgUrl: "/slide-main-team.png"
         },
         {
           title: "可能是北邮第二值得加入的团队，如今招新。3",
           content:
-            "成立于 2003 年 ，来自北邮人论坛、北邮人 BT 和 BYRIO 社区，传统悠久、技术深厚、大佬如云6"
+            "成立于 2003 年 ，来自北邮人论坛、北邮人 BT 和 BYRIO 社区，传统悠久、技术深厚、大佬如云6",
+          imgUrl: "/slide-main-tshirt.png"
         }
       ]
     };
@@ -77,9 +86,14 @@ export default {
     display: flex
     flex-flow: row nowrap
     height: 30rem
+
 .intro-right
-    img
+    height: 100%
+    .swiper-item
         height: 100%
+        width: 100%
+        img
+            height: 100%
 .intro-left
     margin-top: 7rem
     width: 23rem
