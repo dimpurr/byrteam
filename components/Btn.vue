@@ -1,5 +1,5 @@
 <template>
-    <a class="btn" :class="{flat,outline,large}"><slot /></a>
+    <span class="btn" :class="{flat,outline,large}"><slot /></span>
 </template>
 <script>
 export default {
@@ -8,8 +8,9 @@ export default {
 </script>
 <style lang="sass" scoped>
 .btn
+    cursor: pointer
     font-size: 1rem
-    padding: 1.3rem
+    padding: 1.3rem 2.1rem
     display: flex
     width: 6rem
     justify-content: center

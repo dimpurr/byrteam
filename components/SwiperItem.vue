@@ -18,12 +18,12 @@ export default {
 .visible 
   visibility: visible
   opacity: 1
-  transition: opacity 2s linear
+  transition: opacity 0.5s linear
 
 .hidden 
   visibility: hidden
   opacity: 0
-  transition: visibility 0s 2s, opacity 2s linear
+  transition: visibility 0s 0.5s, opacity 0.5s linear
 
 
 </style>
