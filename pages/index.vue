@@ -1,4 +1,5 @@
 <template>
+<div>
   <div class="page">
     <section class="header">
       <a href="/" class="logo">
@@ -12,14 +13,18 @@
       </nav>
     </section>
   </div>
+  <FooterArticle />
+</div>
 </template>
 
 <script>
 import AppLogo from '~/components/AppLogo.vue'
+import FooterArticle from '~/components/FooterArticle.vue'
 
 export default {
   components: {
-    AppLogo
+    AppLogo,
+    FooterArticle
   }
 }
 </script>
