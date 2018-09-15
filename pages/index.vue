@@ -12,6 +12,7 @@
         </ul>
       </nav>
     </section>
+    <GroupsIntro />
   </div>
   <FooterArticle />
 </div>
@@ -20,11 +21,13 @@
 <script>
 import AppLogo from '~/components/AppLogo.vue'
 import FooterArticle from '~/components/FooterArticle.vue'
+import GroupsIntro from '~/components/GroupsIntro.vue'
 
 export default {
   components: {
     AppLogo,
-    FooterArticle
+    FooterArticle,
+    GroupsIntro
   }
 }
 </script>
