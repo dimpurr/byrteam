@@ -18,9 +18,12 @@
       </section>
 
       <intro-section />
-      <GroupsIntro />
+      <service />
+      <enroll />
+      <groups-intro />
     </div>
-    <FooterArticle />
+    <Footer />
+    <footer-article />
   </div>
 </template>
 
@@ -31,6 +34,9 @@ import Swiper from "~/components/Swiper";
 import SwiperItem from "~/components/SwiperItem";
 import Btn from "~/components/Btn";
 import IntroSection from "~/components/IntroSection.vue";
+import Enroll from "~/components/Enroll.vue";
+import Footer from "~/components/Footer.vue";
+import Service from "~/components/Service.vue";
 export default {
   components: {
     Swiper,
@@ -38,7 +44,10 @@ export default {
     Btn,
     IntroSection,
     FooterArticle,
-    GroupsIntro
+    GroupsIntro,
+    Enroll,
+    Footer,
+    Service
   },
   data() {
     return {
