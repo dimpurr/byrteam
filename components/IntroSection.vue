@@ -11,10 +11,7 @@
                 <btn>立即报名</btn>
                 <btn :flat="true">加群咨询</btn>
             </div>
-            <div class="arrows">
-                <span :class="{visible:isArrowLeftShow,hidden:!isArrowLeftShow}" @click="introCurrentIdx--">&lt;</span>
-                <span :class="{visible:isArrowRightShow,hidden:!isArrowRightShow}" @click="introCurrentIdx++">&gt;</span>
-            </div>
+            <swiper-arrows :isFirst="this.introCurrentIdx == 0" :isLast=" this.introCurrentIdx == (this.intros.length - 1)" @next="introCurrentIdx++" @prev="introCurrentIdx--" />
         </div>
 
         <swiper class="intro-right">
@@ -29,20 +26,14 @@
 <script>
 import Swiper from "~/components/Swiper";
 import SwiperItem from "~/components/SwiperItem";
+import SwiperArrows from "~/components/SwiperArrows";
 import Btn from "~/components/Btn";
 export default {
   components: {
     Swiper,
     SwiperItem,
-    Btn
-  },
-  computed: {
-    isArrowLeftShow() {
-      return this.introCurrentIdx !== 0;
-    },
-    isArrowRightShow() {
-      return this.introCurrentIdx !== this.intros.length - 1;
-    }
+    Btn,
+    SwiperArrows
   },
   data() {
     return {
@@ -112,19 +103,5 @@ export default {
         flex-flow: row nowrap
     .arrows
         margin-top: 1rem
-    .arrows *
-        cursor: pointer
-        font-size: 1.6rem
-        color: rgb(125, 125, 125)
-        padding: 0.2rem
 
-.visible 
-  visibility: visible
-  opacity: 1
-  transition: opacity 0.2s linear
-
-.hidden 
-  visibility: hidden
-  opacity: 0
-  transition: visibility 0s 0.2s, opacity 0.2s linear
 </style>

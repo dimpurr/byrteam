@@ -1,39 +1,49 @@
 <template>
-  <div class="page">
-    <section class="header">
-      <a href="/" class="logo">
-        <img src="logo.png" />
-      </a>
-      <nav class="nav">
-        <ul>
-          <li>
-            <a href="#">导航链接</a>
-          </li>
-          <li>
-            <a href="#">导航链接</a>
-          </li>
-        </ul>
-      </nav>
-    </section>
-   
-    <intro-section />
-    <btn @click="a=false" :flat="true">报名</btn>
+  <div>
+    <div class="page">
+      <section class="header">
+        <a href="/" class="logo">
+          <img src="logo.png" />
+        </a>
+        <nav class="nav">
+          <ul>
+            <li>
+              <a href="#">导航链接</a>
+            </li>
+            <li>
+              <a href="#">导航链接</a>
+            </li>
+          </ul>
+        </nav>
+      </section>
+
+      <intro-section />
+      <GroupsIntro />
+    </div>
+    <FooterArticle />
   </div>
 </template>
 
 <script>
-
-import Swiper from '~/components/Swiper';
-import SwiperItem from '~/components/SwiperItem';
-import Btn from '~/components/Btn';
-import IntroSection from '~/components/IntroSection.vue';
+import FooterArticle from "~/components/FooterArticle.vue";
+import GroupsIntro from "~/components/GroupsIntro.vue";
+import Swiper from "~/components/Swiper";
+import SwiperItem from "~/components/SwiperItem";
+import Btn from "~/components/Btn";
+import IntroSection from "~/components/IntroSection.vue";
 export default {
   components: {
-    Swiper,SwiperItem,Btn,IntroSection
-  },data(){
+    Swiper,
+    SwiperItem,
+    Btn,
+    IntroSection,
+    FooterArticle,
+    GroupsIntro
+  },
+  data() {
     return {
-      a:true
-    }
+      a: true
+    };
   }
 };
 </script>
@@ -89,9 +99,11 @@ li-clear() {
   }
 }
 
-section.intro
-  .swiper
-    width: 200px
-    height: 200px
+section.intro {
+  .swiper {
+    width: 200px;
+    height: 200px;
+  }
+}
 </style>
 
