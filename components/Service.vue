@@ -18,19 +18,13 @@
 </template>
 
 <script>
+import {services} from '~/data/services.json';
 export default {
   props: {
     itemList: {
       type: Array,
       default: () => {
-        return [
-          { url: "services-byrbbs.png", title: "北邮人论坛" },
-          { url: "services-byrbt.png", title: "北邮人 BT" },
-          { url: "services-iptv.png", title: "北邮人 IPTV" },
-          { url: "services-byrio.png", title: "BYRIO开源社区" },
-          { url: "services-blogroll.png", title: "北邮人博客圈" },
-          { url: "services-yiban.png", title: "易班生活服务" }
-        ];
+        return services;
       }
     }
   }

@@ -1,8 +1,8 @@
 <template>
-    <section class="GroupsIntro">
+	<section class="GroupsIntro">
 		<ul class="groups">
 			<li class="group" v-for="(group,index) in groups" :key="index">
-				
+
 				<div class="info">
 					<h3>{{ group.name }}</h3>
 					<h4>{{ group.name_en }}</h4>
@@ -13,19 +13,18 @@
 						</li>
 					</ul>
 				</div>
-				
-				
+
 				<div class="slideCtn">
-                <swiper-arrows class="arrows" :isFirst="group.slideCurrentIdx == 0" :isLast=" group.slideCurrentIdx == (group.slides.length - 1)" @next="group.slideCurrentIdx++" @prev="group.slideCurrentIdx--" />
-				<swiper>
-					<swiper-item v-for="(slide,$index) in group.slides" :key="$index" :show="group.slideCurrentIdx == $index">
-						<div>{{slide.text}}</div>
-						<img :src="slide.img"/>
-					</swiper-item>
-				</swiper>
+					<swiper-arrows class="arrows" :isFirst="group.slideCurrentIdx == 0" :isLast=" group.slideCurrentIdx == (group.slides.length - 1)" @next="group.slideCurrentIdx++" @prev="group.slideCurrentIdx--" />
+					<swiper>
+						<swiper-item v-for="(slide,$index) in group.slides" :key="$index" :show="group.slideCurrentIdx == $index">
+							<div>{{slide.text}}</div>
+							<img :src="slide.img" />
+						</swiper-item>
+					</swiper>
 				</div>
 			</li>
-    	</ul>
+		</ul>
 	</section>
 </template>
 
@@ -34,70 +33,15 @@
 import Swiper from "~/components/Swiper";
 import SwiperItem from "~/components/SwiperItem";
 import SwiperArrows from "~/components/SwiperArrows";
+import { groups } from "~/data/groups.json";
 export default {
-	components:{
-Swiper,SwiperItem,SwiperArrows
-	},
-  props: {
-    groups: {
-      type: Array,
-      default: () => {
-        return [
-			{
-				name: '技术组',
-				name_en: 'DEVELOPE GROUP',
-				intro: 'BYR 坚强的技术后盾，新产品的研发中心。坚强的技术后盾，新产品的研发中心。坚强的技术后盾，新产品的研发中心。<br>希望热爱技术的小伙伴加入我们一起玩！',
-				links: [
-					{
-						title: '计划中项目',
-						url: 'http://wiki.byr.moe'
-					},
-					{
-						title: '计划中项目',
-						url: 'http://wiki.byr.moe'
-					},
-				],
-				slides: [
-					{
-						text: '我们维护 BYRIO 北邮互联网与开源社区，参与贡献 KDE.org 等国际开源软件项目，还有机会和清华 TUNA 、中科大 USTCLUG 的小伙伴们一起交流。',
-						img: '/article/soscon.png'
-					},
-					{
-						text: '我们维护 BYRIO 北邮互联网与开源社区，参与贡献 KDE.org 等国际开源软件项目，还有机会和清华 TUNA 、中科大 USTCLUG 的小伙伴们一起交流。',
-						img: '/article/soscon.png'
-					}
-				],
-				slideCurrentIdx:0
-			},
-			{
-				name: '技术组',
-				name_en: 'DEVELOPE GROUP',
-				intro: 'BYR 坚强的技术后盾，新产品的研发中心。<br>希望热爱技术的小伙伴加入我们一起玩！',
-				links: [
-					{
-						title: '计划中项目',
-						url: 'http://wiki.byr.moe'
-					},
-					{
-						title: '计划中项目',
-						url: 'http://wiki.byr.moe'
-					},
-				],
-				slides: [
-					{
-						text: '我们维护 BYRIO 北邮互联网与开源社区，参与贡献 KDE.org 等国际开源软件项目，还有机会和清华 TUNA 、中科大 USTCLUG 的小伙伴们一起交流。',
-						img: '/article/soscon.png'
-					},
-					{
-						text: '我们维护 BYRIO 北邮互联网与开源社区，参与贡献 KDE.org 等国际开源软件项目，还有机会和清华 TUNA 、中科大 USTCLUG 的小伙伴们一起交流。',
-						img: '/article/soscon.png'
-					}
-				],
-				slideCurrentIdx:0
-			}
-        ];
-      }
-    }
+  components: {
+    Swiper,
+    SwiperItem,
+    SwiperArrows
+  },
+  data() {
+    return { groups: groups.map(_ => ({ ..._, slideCurrentIdx: 0 })) };
   }
 };
 </script>
@@ -176,6 +120,5 @@ Swiper,SwiperItem,SwiperArrows
 					right 0
 				img 
 					width 100%
-
 
 </style>

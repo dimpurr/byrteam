@@ -28,6 +28,7 @@ import Swiper from "~/components/Swiper";
 import SwiperItem from "~/components/SwiperItem";
 import SwiperArrows from "~/components/SwiperArrows";
 import Btn from "~/components/Btn";
+import {intros} from "~/data/intro.json";
 export default {
   components: {
     Swiper,
@@ -38,32 +39,7 @@ export default {
   data() {
     return {
       introCurrentIdx: 0,
-      intros: [
-        {
-          title: "可能是北邮第二值得加入的团队，如今招新。",
-          content:
-            "成立于 2003 年 ，来自北邮人论坛、北邮人 BT 和 BYRIO 社区，传统悠久、技术深厚、大佬如云",
-          imgUrl: "/slide-main-team.png"
-        },
-        {
-          title: "可能是北邮第二值得加入的团队，如今招新。1",
-          content:
-            "成立于 2003 年 ，来自北邮人论坛、北邮人 BT 和 BYRIO 社区，传统悠久、技术深厚、大佬如云4",
-          imgUrl: "/slide-main-tshirt.png"
-        },
-        {
-          title: "可能是北邮第二值得加入的团队，如今招新。2",
-          content:
-            "成立于 2003 年 ，来自北邮人论坛、北邮人 BT 和 BYRIO 社区，传统悠久、技术深厚、大佬如云5",
-          imgUrl: "/slide-main-team.png"
-        },
-        {
-          title: "可能是北邮第二值得加入的团队，如今招新。3",
-          content:
-            "成立于 2003 年 ，来自北邮人论坛、北邮人 BT 和 BYRIO 社区，传统悠久、技术深厚、大佬如云6",
-          imgUrl: "/slide-main-tshirt.png"
-        }
-      ]
+      intros
     };
   }
 };

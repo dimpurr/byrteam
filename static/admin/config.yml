@@ -25,7 +25,20 @@ collections:
               - label: Image
                 name: img
                 widget: image
-        
+      - label: 服务
+        name: services
+        file: "data/services.json"
+        fields:
+          - name: services
+            label: 服务项目
+            widget: list
+            fields:
+              - label: Title
+                name: title
+                widget: string
+              - label: Image
+                name: url
+                widget: image
       - label: 中部介绍
         name: groups
         file: "data/groups.json"
@@ -39,6 +52,9 @@ collections:
                 widget: string
               - label: English Name
                 name: name_en
+                widget: string
+              - label: Intro
+                name: intro
                 widget: string
               - label: Links
                 name: links

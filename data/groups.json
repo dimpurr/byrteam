@@ -3,7 +3,32 @@
     {
       "name": "技术组",
       "name_en": "DEVELOPE GROUP",
-      "intro": "BYR 坚强的技术后盾，新产品的研发中心。坚强的技术后盾，新产品的研发中心。坚强的技术后盾，新产品的研发中心。希望热爱技术的小伙伴加入我们一起玩",
+      "intro": "BYR 坚强的技术后盾，新产品的研发中心。坚强的技术后盾， 新产品的研发中心。坚强的技术后盾，新产品的研发中心。<br>希望热爱技术的小伙伴加入我们一起玩！",
+      "links": [
+        {
+          "title": "计划中 项目",
+          "url": "http://wiki.byr.moe"
+        },
+        {
+          "title": "计划中项目",
+          "url": "http://wiki.byr.moe"
+        }
+      ],
+      "slides": [
+        {
+          "text": "我们维护 BYRIO 北邮互联网与开源社区，参与贡献 KDE.org 等国际开源软件项目，还有机会和清华 TUNA 、中科大 USTCLUG 的小伙伴们一起交流。",
+          "img": "/uploads/soscon.png"
+        },
+        {
+          "text": "我们维护 BYRIO 北邮互联网与开源社区，参与贡献 KDE.org 等国际开源软件项目，还有机会 和清华 TUNA 、中科大 USTCLUG 的小伙伴们一起交流。",
+          "img": "/uploads/soscon.png"
+        }
+      ]
+    },
+    {
+      "name": "技术组",
+      "name_en": "DEVELOPE GROUP",
+      "intro": "BYR 坚强的技术后盾，新产品的研发中心。<br>希望热爱技术的小伙伴加入我们一起玩！",
       "links": [
         {
           "title": "计划中项目",
@@ -14,10 +39,14 @@
           "url": "http://wiki.byr.moe"
         }
       ],
-      "sildes": [
+      "slides": [
+        {
+          "text": "我们维护 BYRIO 北邮互联网与开源社区，参与贡献 KDE.org 等国际开源软件项目，还有机会和清华 TUNA 、中科大 USTCLUG 的 小伙伴们一起交流。",
+          "img": "/uploads/soscon.png"
+        },
         {
           "text": "我们维护 BYRIO 北邮互联网与开源社区，参与贡献 KDE.org 等国际开源软件项目，还有机会和清华 TUNA 、中科大 USTCLUG 的小伙伴们一起交流。",
-          "img": "/uploads/services-yiban.png"
+          "img": "/uploads/soscon.png"
         }
       ]
     }
