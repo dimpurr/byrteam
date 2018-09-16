@@ -42,6 +42,7 @@ $author: jasonwu;
 .service {
   display: flex;
   flex-direction: column;
+  width: 100%;
 }
 .title {
   position: relative;
@@ -73,6 +74,8 @@ $author: jasonwu;
   display: flex;
   flex-direction: row;
   margin-left: -1rem;
+  width: 100%;
+  justify-content: space-around;
   .item {
     display: flex;
     flex-direction: column;

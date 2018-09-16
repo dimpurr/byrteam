@@ -19,6 +19,7 @@
 
       <intro-section />
       <service />
+      <QuoteByrbbs/>
       <enroll />
       <groups-intro />
     </div>
@@ -37,6 +38,7 @@ import IntroSection from "~/components/IntroSection.vue";
 import Enroll from "~/components/Enroll.vue";
 import Footer from "~/components/Footer.vue";
 import Service from "~/components/Service.vue";
+import QuoteByrbbs from "~/components/QuoteByrbbs.vue";
 export default {
   components: {
     Swiper,
@@ -47,7 +49,8 @@ export default {
     GroupsIntro,
     Enroll,
     Footer,
-    Service
+    Service,
+    QuoteByrbbs
   },
   data() {
     return {
