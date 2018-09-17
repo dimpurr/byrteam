@@ -1,0 +1,28 @@
+{
+    "services": [
+        {
+            "url": "/uploads/services-byrbbs.png",
+            "title": "北邮人论坛"
+        },
+        {
+            "url": "/uploads/services-byrbt.png",
+            "title": "北邮人 BT"
+        },
+        {
+            "url": "/uploads/services-iptv.png",
+            "title": "北邮人 IPTV"
+        },
+        {
+            "url": "/uploads/services-byrio.png",
+            "title": "BYRIO开源社区"
+        },
+        {
+            "url": "/uploads/services-blogroll.png",
+            "title": "北邮人博客圈"
+        },
+        {
+            "url": "/uploads/services-yiban.png",
+            "title": "易班生活服务"
+        }
+    ]
+}

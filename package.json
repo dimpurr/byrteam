@@ -13,7 +13,11 @@
     "precommit": "npm run lint"
   },
   "dependencies": {
+    "basscss": "^8.0.10",
+    "node-sass": "^4.9.3",
     "nuxt": "^1.0.0",
+    "sass": "^1.13.4",
+    "sass-loader": "^7.1.0",
     "stylus": "^0.54.5",
     "stylus-loader": "^3.0.2"
   },

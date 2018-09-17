@@ -1,66 +1,123 @@
 <template>
-  <div class="page">
-    <section class="header">
-      <a href="/" class="logo">
-        <img src="logo.png" />
-      </a>
-      <nav class="nav">
-        <ul>
-          <li><a href="#">导航链接</a></li>
-          <li><a href="#">导航链接</a></li>
-        </ul>
-      </nav>
-    </section>
+  <div>
+    <div class="page">
+      <section class="header">
+        <a href="/" class="logo">
+          <img src="logo.png" />
+        </a>
+        <nav class="nav">
+          <ul>
+            <li>
+              <a href="#">导航链接</a>
+            </li>
+            <li>
+              <a href="#">导航链接</a>
+            </li>
+          </ul>
+        </nav>
+      </section>
+
+      <intro-section />
+      <service />
+      <QuoteByrbbs/>
+      <enroll />
+      <groups-intro />
+    </div>
+    <Footer />
+    <footer-article />
   </div>
 </template>
 
 <script>
-import AppLogo from '~/components/AppLogo.vue'
-
+import FooterArticle from "~/components/FooterArticle.vue";
+import GroupsIntro from "~/components/GroupsIntro.vue";
+import Swiper from "~/components/Swiper";
+import SwiperItem from "~/components/SwiperItem";
+import Btn from "~/components/Btn";
+import IntroSection from "~/components/IntroSection.vue";
+import Enroll from "~/components/Enroll.vue";
+import Footer from "~/components/Footer.vue";
+import Service from "~/components/Service.vue";
+import QuoteByrbbs from "~/components/QuoteByrbbs.vue";
 export default {
   components: {
-    AppLogo
+    Swiper,
+    SwiperItem,
+    Btn,
+    IntroSection,
+    FooterArticle,
+    GroupsIntro,
+    Enroll,
+    Footer,
+    Service,
+    QuoteByrbbs
+  },
+  data() {
+    return {
+      a: true
+    };
   }
-}
+};
 </script>
 
 <style lang="stylus" scoped>
+$width-screen = 900px;
+$color-grey-middle = #7d7d7d;
 
-$width-screen = 700px
+a-clear() {
+  text-decoration: none;
+}
 
-$color-grey-middle = #7d7d7d
+ul-clear() {
+  padding: 0;
+}
 
-a-clear()
-  text-decoration none
+li-clear() {
+  display: inline-block;
+}
 
-ul-clear()
-  padding 0
+.page {
+  max-width: $width-screen;
+  margin: 0 auto;
+  font-size: 14px;
+}
 
-li-clear()
-  display inline-block
+.header {
+  display: flex;
+  flex-direction: row;
+  margin-top: 20px;
 
-.page
-  max-width $width-screen
-  margin 0 auto
-  font-size 14px
+  a.logo {
+    img {
+      height: 40px;
+    }
+  }
 
-.header
-  display flex
-  flex-direction row
-  margin-top 20px
-  a.logo
-    img
-      height 40px
-  .nav
-    flex-grow 1
-    ul-clear()
-    text-align right
-    line-height 40px
-    li
-      li-clear()
-      margin-left 20px
-      a
-        a-clear()
-        color $color-grey-middle
+  .nav {
+    position relative
+    z-index 10
+    flex-grow: 1;
+    ul-clear();
+    text-align: right;
+    line-height: 40px;
+
+    li {
+      li-clear();
+      margin-left: 20px;
+
+      a {
+        a-clear();
+        color: $color-grey-middle;
+      }
+    }
+  }
+}
+
+section.intro {
+  .swiper {
+    width: 200px;
+    height: 200px;
+  }
+}
 </style>
 
