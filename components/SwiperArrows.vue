@@ -14,6 +14,7 @@ export default {
 </script>
 <style lang="sass" scoped>
 .arrows *
+    font-weight: 100
     cursor: pointer
     font-size: 1.6rem
     color: rgb(125, 125, 125)

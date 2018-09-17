@@ -59,6 +59,7 @@ export default {
 <style lang="scss" scoped>
 $author:jasonwu;
 .root {
+  margin: 80px 0;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -91,6 +92,6 @@ $author:jasonwu;
       }
     }
   }
-  margin-bottom: 3rem;
+  padding-bottom: 3rem;
 }
 </style>

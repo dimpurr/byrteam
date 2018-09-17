@@ -10,6 +10,8 @@ export default {};
 <style lang="scss" scoped>
 $author: jasonwu;
 .root {
+  margin: 80px 0 90px 0;
+  font-size: 14px;
   width: 100%;
   display: flex;
   flex-direction: column;

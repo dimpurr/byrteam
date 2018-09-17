@@ -79,7 +79,7 @@ $author: jasonwu;
         height: 3rem;
         line-height: 150%;
         padding-left: 2rem;
-        font-size: 0.75rem;
+        font-size: 13px;
         background-color: #f8f8f8;
         border: none;
         outline: none;
@@ -97,8 +97,8 @@ $author: jasonwu;
         color: #666;
       }
       .job {
-        font-size: 0.85rem;
-        padding: 0.45rem 0.45rem;
+        font-size: 13px;
+        padding: 0.55rem 0.55rem;
         margin: 0 0.31rem;
         transition: all 0.1s;
       }

@@ -1,12 +1,15 @@
 <template>
-    <section class="footerArticle"><ul>
-      <li class="article" v-for="(article,index) in articles" :key="index" v-bind:style="{ backgroundImage: `url('${article.img}')` }">
-        <a :href="article.url">
-          <h3>{{ article.title }}</h3>
-          <h4>{{ article.desc }}</h4>
-        </a>
-      </li>
-    </ul></section>
+    <section class="footerArticle">
+      <center><small style="color: #777">或者阅读更多 ...</small></center>
+      <ul>
+        <li class="article" v-for="(article,index) in articles" :key="index" v-bind:style="{ backgroundImage: `url('${article.img}')` }">
+          <a :href="article.url">
+            <h3>{{ article.title }}</h3>
+            <h4>{{ article.desc }}</h4>
+          </a>
+        </li>
+     </ul>
+    </section>
 </template>
 
 
@@ -50,7 +53,10 @@ export default {
 
 <style lang="stylus" scoped>
 .footerArticle
+  margin 50px 0 0 0
   ul
+    margin 0
+    margin-top 25px
     padding 0
     display flex
     flex-direction row
@@ -60,6 +66,7 @@ export default {
       width 50%
       position relative
       background-size cover
+      list-style none
       &::before
         content ''
         display block

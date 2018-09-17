@@ -94,6 +94,8 @@ li-clear() {
   }
 
   .nav {
+    position relative
+    z-index 10
     flex-grow: 1;
     ul-clear();
     text-align: right;

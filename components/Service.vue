@@ -10,9 +10,19 @@
     </div>
     <div class="item-list">
       <div class="item" v-for="(item,index) in itemList" :key="index">
-        <img :src="item.url" />
-        <div class="title">{{item.title}}</div>
+        <a href="#">
+          <img :src="item.url" />
+          <div class="title">{{item.title}}</div>
+        </a>
       </div>
+      <!-- <div class="item item-yiban">
+        <ul>
+          <li><a href="#">易健身</a></li>
+          <li><a href="#">易签到</a></li>
+          <li><a href="#">易租借</a></li>
+          <li><a href="#">易物</a></li>
+        </ul>
+      </div> -->
     </div>
   </div>
 </template>
@@ -37,10 +47,11 @@ $author: jasonwu;
   display: flex;
   flex-direction: column;
   width: 100%;
+  margin: 50px 0 0 0;
 }
 .title {
   position: relative;
-  margin-bottom: 1rem;
+  margin-bottom: 1.4rem;
   .slash-box {
     position: absolute;
     display: flex;
@@ -59,9 +70,9 @@ $author: jasonwu;
     font-weight: 500;
   }
   .en {
-    color: #666;
+    color: #7d7d7d;
     font-size: 0.8rem;
-    font-weight: 500;
+    font-weight: 400;
   }
 }
 .item-list {
@@ -75,6 +86,15 @@ $author: jasonwu;
     flex-direction: column;
     align-items: center;
     margin: 0 1rem;
+    a {
+      text-decoration: none;
+      text-align: center;
+    }
+    a:hover {
+      img {
+        opacity: 0.8;
+      }
+    }
     img {
       width: 2.75rem;
       height: 2.75rem;
@@ -83,6 +103,17 @@ $author: jasonwu;
     .title {
       font-size: 0.8rem;
       color: #333;
+      min-width: 70px;
+      text-align: center;
+    }
+  }
+  .item-yiban {
+    ul {
+      padding: 0;
+    }
+    li {
+      list-style: 0;
+      margin: 0;
     }
   }
 }

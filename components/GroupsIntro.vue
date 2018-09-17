@@ -60,11 +60,14 @@ export default {
 			box-sizing border-box
 			&:nth-child(even)
 				.info
-					padding 30px 300px 0 0
+					padding 30px 360px 0 0
 					text-align right 
+					p
+						padding-right 0
+						padding-left 100px
 				.slideCtn
 					left auto
-					right -130px
+					right -60px
 					text-align left
 				&::before
 					left auto
@@ -72,17 +75,21 @@ export default {
 					top -150px
 			.info
 				// border 1px solid #000
-				padding 30px 0 0 300px
+				padding 30px 0 0 360px
 				text-align left 
 				h3, h4
 					font-weight normal
 				h3
 					font-size 20px
+					margin 0
 				h4
+					margin 0.4em 0
 					font-size 14px
 					color #7d7d7d
 				p
 					margin 20px 0 28px 0
+					padding-right 100px
+					// max-width 400px
 				ul
 					padding 0
 					li
@@ -98,7 +105,7 @@ export default {
 			.slideCtn
 				position absolute
 				width 300px
-				left -130px
+				left -60px
 				top 0
 				text-align right 
 				&::before
@@ -107,7 +114,7 @@ export default {
 					display block
 					position absolute
 					left -100px
-					top -150px
+					top -140px
 					width 500px
 					height 500px
 					background-image url('~static/box.png')
@@ -120,5 +127,9 @@ export default {
 					right 0
 				img 
 					width 100%
+					border-radius: 3px
+					margin: 10px 0
+					max-height: 150px
+					object-fit: cover
 
 </style>

@@ -53,20 +53,42 @@ export default {
     display: flex
     flex-flow: row nowrap
     height: 30rem
+    margin-top: -60px
 
 .intro-right
     height: 100%
     .swiper-item
         height: 100%
         width: 100%
+        text-align: right
         img
-            height: 100%
+            margin-top: 80px
+            margin-right: -30px
+            height: 380px
+            width: 100%
+            object-fit: cover
+            border-radius: 70% 30% 70% 30%
+    // .swiper-item::before
+    //     content: ''
+    //     display: block
+    //     position: absolute
+    //     margin-top: 100px
+    //     margin-left: -140px
+    //     z-index: 10
+    //     height: 330px
+    //     width: 200px
+    //     background: #fff
+    //     // border: 1px solid #ddd
+    //     transform: skew(-20deg)
 .intro-left
+    z-index: 100
+    position: relative
     margin-top: 7rem
     width: 23rem
     .title
         font-size: 1.9rem
-        letter-spacing: 5px
+        // letter-spacing: 5px
+        // letter-spacing: 2px
     p
         font-size: 0.9rem
         color: rgb(125, 125, 125)

@@ -9,14 +9,16 @@ export default {
 <style lang="sass" scoped>
 .btn
     cursor: pointer
-    font-size: 1rem
-    padding: 1.3rem 2.1rem
+    font-size: 14px
+    padding: 1rem 1.6rem
     display: flex
     width: 6rem
     justify-content: center
     align-items: center
     background: rgb(102, 204, 255)
     color: white
+    &:hover
+        background: rgb(92, 194, 245)
 .flat
     background: none !important
     color: rgb(127, 127, 127)
